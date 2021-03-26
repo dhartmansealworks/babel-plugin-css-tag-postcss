@@ -26,7 +26,7 @@ const plugin = () => {
     name: "babel-plugin-css-tag-postcss",
     visitor: {
       TaggedTemplateExpression(path, state) {
-        if (!path.get("tag").isIdentifier({ name: state.opts.tag ?? "css" })) {
+        if (!path.get("tag").isIdentifier({ name: "css" })) {
           return;
         }
         /**
